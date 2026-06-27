@@ -1,64 +1,24 @@
-# PULAO
+# PULAO • AI-powered temporary access control
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+> **Most events still run on clipboards and eyeballs.  
+> PULAO turns any camera or authorized phone into an instant AI checkpoint.**
 
-## Overview
+[![Build status](https://github.com/your-org/pulao/actions/workflows/ci.yml/badge.svg)](…)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-PULAO is a project repository. Add your project description here.
+---
 
-## Features
+### ✨ What it does  
+* Create **zones** (Main Gate, VIP, Staff-only)  
+* Upload or snap guest photos → mark them *Allowed*, *VIP*, or *Blocked*  
+* Point a phone or camera; PULAO decides in real time  
 
-- Feature 1
-- Feature 2
-- Feature 3
+<img src="docs/demo.gif" width="720" />
 
-## Getting Started
-
-### Prerequisites
-
-- Requirement 1
-- Requirement 2
-
-### Installation
+### 🚀 Quick start
 
 ```bash
-# Clone the repository
-git clone https://github.com/6hammad9/PULAO.git
-cd PULAO
-
-# Install dependencies (if applicable)
-# npm install
-```
-
-### Usage
-
-Add usage instructions here.
-
-```bash
-# Example command
-```
-
-## Project Structure
-
-```
-PULAO/
-├── README.md
-├── ...
-└── ...
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
-
-Created by [6hammad9](https://github.com/6hammad9)
-
-## Support
-
-For support, open an issue on the [GitHub Issues](https://github.com/6hammad9/PULAO/issues) page.
+git clone https://github.com/your-org/pulao.git
+cd pulao
+docker compose up      # backend + DB
+npm install && npm run dev   # frontend
