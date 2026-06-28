@@ -1,0 +1,44 @@
+# Environment and secrets
+.env
+**/.env
+*.local
+
+# Dependencies and builds
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Runtime uploads, evidence, OCR state, and generated data
+**/temp_uploads/
+**/uploads/
+**/detected/
+**/events/
+**/logs/
+**/__pycache__/
+**/*.py[cod]
+**/users.pkl
+**/metadata.json
+**/cameras_local.json
+**/vision_service*.log
+
+# Local archive kept out of GitHub
+redundant/
+
+# Local notes/data
+mongo.txt
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor and OS noise
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

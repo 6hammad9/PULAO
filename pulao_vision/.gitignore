@@ -1,0 +1,28 @@
+.env
+__pycache__/
+*.py[cod]
+
+# Runtime evidence and event-scoped OCR data
+detected/
+events/
+logs/
+vision_service*.log
+*.log
+
+# Local embeddings and generated metadata
+users.pkl
+metadata.json
+cameras_local.json
+New folder/
+
+# Local training/test image datasets
+data2/
+whitelisted/
+
+# Large local model binaries
+models/*.onnx
+
+# OS/editor noise
+.DS_Store
+.vscode/
+.idea/

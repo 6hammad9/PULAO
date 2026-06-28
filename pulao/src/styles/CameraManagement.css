@@ -1,0 +1,384 @@
+.camera-management {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  min-height: 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #111111;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.section-lede {
+  max-width: 760px;
+  margin: -4px 0 0;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid #111111;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+}
+
+.btn-primary {
+  background: #111111;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #000000;
+}
+
+.btn-secondary {
+  border-color: #d9d9d9;
+  color: #111111;
+}
+
+.btn-outline-primary,
+.btn-outline-danger {
+  min-height: 34px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.btn-outline-primary {
+  border-color: #0f766e;
+  color: #0f766e;
+}
+
+.btn-outline-danger {
+  border-color: #cc3333;
+  color: #990000;
+}
+
+.camera-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.camera-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-header-row {
+  min-height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  margin: 0;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.status-badge {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid #d9d9d9;
+  background: #f7f7f7;
+  color: #111111;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card-info {
+  border-top: 1px solid #eeeeee;
+}
+
+.card-info p,
+.info-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+  color: #555555;
+  font-size: 13px;
+}
+
+.card-info strong,
+.info-row strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.mobile-checkpoint-access {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 104px;
+  gap: 14px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  background: #f7f7f7;
+}
+
+.mobile-checkpoint-copy span {
+  display: block;
+  color: #0f8f52;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mobile-checkpoint-copy strong {
+  display: block;
+  margin: 7px 0 10px;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.mobile-checkpoint-access img {
+  width: 104px;
+  height: 104px;
+  display: block;
+  padding: 6px;
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.modal {
+  width: min(92vw, 680px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 2px;
+}
+
+/* The form wraps the body + footer, so it must carry the flex column through
+   to the modal; otherwise the scrollable body has nothing to flex against and
+   the footer (Register button) gets clipped below the modal boundary. */
+.modal > form {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header,
+.modal-footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.modal-footer {
+  justify-content: flex-end;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 0;
+  background: #ffffff;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #111111;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #111111;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #111111;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #555555;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid #99f6e4;
+  outline-offset: 0;
+  border-color: #0f766e;
+}
+
+.select-with-add {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-sm {
+  width: 40px;
+  padding: 0;
+}
+
+.loading-spinner {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #d9d9d9;
+  border-top-color: #111111;
+  border-radius: 999px;
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 760px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header-buttons {
+    justify-content: flex-start;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .camera-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-checkpoint-access {
+    grid-template-columns: minmax(0, 1fr) 92px;
+  }
+
+  .mobile-checkpoint-access img {
+    width: 92px;
+    height: 92px;
+  }
+}

@@ -1,24 +1,48 @@
-# PULAO • AI-powered temporary access control
+# PULAO
 
-> **Most events still run on clipboards and eyeballs.  
-> PULAO turns any camera or authorized phone into an instant AI checkpoint.**
+Event-first access operations for temporary venues.
 
-[![Build status](https://github.com/your-org/pulao/actions/workflows/ci.yml/badge.svg)](…)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+PULAO lets an operator create an event, register people for that event, assign allowed checkpoints, and review live access decisions from fixed cameras or mobile browser checkpoints.
 
----
+## Structure
 
-### ✨ What it does  
-* Create **zones** (Main Gate, VIP, Staff-only)  
-* Upload or snap guest photos → mark them *Allowed*, *VIP*, or *Blocked*  
-* Point a phone or camera; PULAO decides in real time  
+- `pulao/` - React frontend
+- `pulao_backend/` - Node/Express API
+- `pulao_vision/` - Python vision service
 
-<img src="docs/demo.gif" width="720" />
+## Local Setup
 
-### 🚀 Quick start
+Create local env files from the examples:
 
 ```bash
-git clone https://github.com/your-org/pulao.git
+cp pulao/.env.example pulao/.env
+cp pulao_backend/.env.example pulao_backend/.env
+cp pulao_vision/.env.example pulao_vision/.env
+```
+
+Install and run the frontend:
+
+```bash
 cd pulao
-docker compose up      # backend + DB
-npm install && npm run dev   # frontend
+npm install
+npm run dev
+```
+
+Install and run the backend:
+
+```bash
+cd pulao_backend
+npm install
+npm run dev
+```
+
+Run the vision service:
+
+```powershell
+cd pulao_vision
+.\start_vision_service.ps1
+```
+
+## Privacy
+
+Runtime files are intentionally ignored: `.env`, uploads, detections, event evidence, logs, embeddings, and generated metadata do not belong in Git.

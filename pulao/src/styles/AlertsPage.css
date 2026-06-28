@@ -1,0 +1,141 @@
+.alerts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alerts-header {
+  min-height: 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.alerts-header h1 {
+  margin: 0;
+  color: #111111;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.alerts-header p:not(.overline) {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.alerts-tabs {
+  display: flex;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.alerts-tab {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-right: 1px solid #d9d9d9;
+  background: #ffffff;
+  color: #555555;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.alerts-tab:last-child {
+  border-right: 0;
+}
+
+.alerts-tab.active {
+  background: #111111;
+  color: #ffffff;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.alert-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 4px solid var(--severity);
+  background: #ffffff;
+}
+
+.alert-row:last-child {
+  border-bottom: 0;
+}
+
+.alert-row.new {
+  background: var(--severity-bg);
+}
+
+.severity-badge {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.alert-copy {
+  min-width: 0;
+}
+
+.alert-title {
+  overflow: hidden;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alert-meta {
+  margin-top: 4px;
+  color: #555555;
+  font-size: 12px;
+}
+
+.empty-kicker {
+  margin-bottom: 8px;
+  color: #555555;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .alerts-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .alert-row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+}

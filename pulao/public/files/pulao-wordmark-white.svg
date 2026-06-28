@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 786 200">
+<g transform="translate(0,0)">
+<rect x="0" y="0" width="40" height="200" rx="6" fill="#fafaf8"/>
+<path d="M0,0 H72 A60,59 0 0 1 72,118 H0 Z M40,36 H72 A23,23 0 0 1 72,82 H40 Z" fill="#fafaf8" fill-rule="evenodd"/></g>
+<g transform="translate(150,0)"><path d="M0,0 V128 A70,70 0 0 0 140,128 V0 Z M38,0 V128 A32,32 0 0 0 102,128 V0 Z" fill="#fafaf8" fill-rule="evenodd"/></g>
+<g transform="translate(304,0)">
+<g fill="#fafaf8">
+  <rect x="0" y="0" width="40" height="200" rx="6"/>
+  <rect x="0" y="160" width="104" height="40" rx="6"/>
+</g></g>
+<g transform="translate(422,0)">
+<path d="M75,0 L150,200 L0,200 Z M75,69.3 L124,200 L26,200 Z" fill="#fafaf8" fill-rule="evenodd"/>
+<path d="M22.5,140 L127.5,140 L138.75,170 L11.25,170 Z" fill="#18D97D"/></g>
+<g transform="translate(586,0)">
+<path d="M4,100 A96,96 0 1 0 196,100 A96,96 0 1 0 4,100 Z M24,100 A76,76 0 1 0 176,100 A76,76 0 1 0 24,100 Z" fill="#fafaf8" fill-rule="evenodd"/>
+<circle cx="100" cy="100" r="64" fill="none" stroke="#fafaf8" stroke-width="3"/>
+<path d="M136,100 L118,131.2 L82,131.2 L64,100 L82,68.8 L118,68.8 Z M90,100 A10,10 0 1 0 110,100 A10,10 0 1 0 90,100 Z" fill="#18D97D" fill-rule="evenodd"/>
+<circle cx="83" cy="86" r="5" fill="#ffffff" opacity="0.5"/></g>
+</svg>

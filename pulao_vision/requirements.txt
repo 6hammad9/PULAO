@@ -1,0 +1,10 @@
+flask
+python-dotenv
+waitress
+requests
+opencv-python
+numpy
+onnxruntime
+scipy
+torch
+cryptography
